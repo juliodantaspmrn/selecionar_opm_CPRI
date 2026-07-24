@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protocolo Policial | Portal do Candidato</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="portal-page">
+    <section class="portal-card">
+      <div class="topbar">
+        <div class="logo-box logo-box-portal">
+          <img
+            src="assets/marca-protocolo-policial.jpeg"
+            alt="Protocolo Policial Cursos"
+            class="logo-protocolo"
+          >
+        </div>
+
+        <button id="sair" class="btn-outline" type="button">Sair</button>
+      </div>
+
+      <div class="welcome">
+        <p class="eyebrow">ÁREA DO CANDIDATO</p>
+        <h1>Bem-vindo, <span id="nomeUsuario"></span>!</h1>
+        <p>Seu material está liberado. Bons estudos e bom desempenho!</p>
+      </div>
+
+      <div class="actions">
+        <a class="action-btn" href="pdf/simulado.pdf" download>
+          <span aria-hidden="true">📄</span>
+          <div>
+            <strong>Baixar Simulado</strong>
+            <small>Faça o download do PDF</small>
+          </div>
+        </a>
+
+        <a
+          id="formsLink"
+          class="action-btn"
+          href="https://forms.google.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span aria-hidden="true">📝</span>
+          <div>
+            <strong>Abrir Cartão-Resposta</strong>
+            <small>Preencha após concluir a prova</small>
+          </div>
+        </a>
+
+        <button id="copiarLink" class="action-btn action-button" type="button">
+          <span aria-hidden="true">📋</span>
+          <div>
+            <strong>Copiar Link</strong>
+            <small>Copie o link do cartão-resposta</small>
+          </div>
+        </button>
+      </div>
+
+      <p id="mensagem" class="mensagem" role="status"></p>
+    </section>
+  </main>
+
+  <script src="js/portal.js"></script>
+</body>
+</html>

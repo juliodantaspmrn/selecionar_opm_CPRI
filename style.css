@@ -1,0 +1,230 @@
+:root {
+  --preto: #090909;
+  --preto-claro: #161616;
+  --dourado: #d79213;
+  --dourado-claro: #f0ad30;
+  --branco: #f8f8f8;
+  --cinza: #c1c1c1;
+  --borda: rgba(215, 146, 19, .48);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--branco);
+  background:
+    linear-gradient(rgba(0, 0, 0, .80), rgba(0, 0, 0, .91)),
+    url("../assets/fundo-simulado.jpg") center / cover fixed no-repeat,
+    var(--preto);
+}
+
+.login-page,
+.portal-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card,
+.portal-card {
+  width: min(100%, 720px);
+  padding: 36px;
+  background: rgba(9, 9, 9, .92);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, .60);
+  backdrop-filter: blur(7px);
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+.logo-protocolo {
+  display: block;
+  width: min(100%, 330px);
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.logo-box-portal {
+  justify-content: flex-start;
+  width: auto;
+  margin: 0;
+}
+
+.logo-box-portal .logo-protocolo {
+  width: 175px;
+  max-height: 68px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.7rem;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--dourado-claro);
+  font-size: .72rem;
+  font-weight: bold;
+  letter-spacing: .13em;
+}
+
+.muted,
+.welcome p {
+  color: var(--cinza);
+  line-height: 1.5;
+}
+
+form {
+  margin-top: 26px;
+}
+
+label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  color: var(--branco);
+  font: inherit;
+  background: rgba(0, 0, 0, .65);
+  border: 1px solid #484848;
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--dourado);
+  box-shadow: 0 0 0 3px rgba(215, 146, 19, .14);
+}
+
+form button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 15px;
+  color: #101010;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--dourado-claro), var(--dourado));
+  border: 0;
+  border-radius: 10px;
+}
+
+.erro {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: #ff8d8d;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-outline {
+  padding: 10px 14px;
+  color: var(--dourado-claro);
+  font: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+}
+
+.welcome {
+  margin: 42px 0 26px;
+}
+
+.actions {
+  display: grid;
+  gap: 14px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 18px;
+  color: var(--branco);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, .66);
+  border: 1px solid #3b3b3b;
+  border-radius: 12px;
+}
+
+.action-btn:hover {
+  border-color: var(--dourado);
+}
+
+.action-btn span {
+  font-size: 1.8rem;
+}
+
+.action-btn strong,
+.action-btn small {
+  display: block;
+}
+
+.action-btn small {
+  margin-top: 4px;
+  color: var(--cinza);
+}
+
+.action-button {
+  font: inherit;
+}
+
+.mensagem {
+  min-height: 20px;
+  color: var(--dourado-claro);
+}
+
+@media (max-width: 520px) {
+  body {
+    background-position: 62% center;
+  }
+
+  .card,
+  .portal-card {
+    padding: 24px 20px;
+  }
+
+  .logo-protocolo {
+    width: 260px;
+    max-height: 115px;
+  }
+
+  .logo-box-portal .logo-protocolo {
+    width: 145px;
+    max-height: 58px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}

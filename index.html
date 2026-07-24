@@ -1,127 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
-  <title>Banco de Pontos Meritório</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* TOPO */
-    .topo {
-      width: 100%;
-      background: #020617;
-      padding: 15px 0;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    }
-
-    .brasao {
-      height: 90px;
-    }
-
-    /* CONTEÚDO */
-    .container {
-      background: #020617;
-      padding: 40px 30px;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 420px;
-      text-align: center;
-      margin-top: 30px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    }
-
-    h1 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 14px;
-      color: #cbd5f5;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.2s ease;
-      color: #020617;
-    }
-
-    .btn:hover {
-      transform: scale(1.02);
-      opacity: 0.9;
-    }
-
-    .btn-2bpm { background: #38bdf8; }
-    .btn-12bpm { background: #22c55e; }
-    .btn-6cipm { background: #facc15; }
-
-    footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #94a3b8;
-      text-align: center;
-    }
-  </style>
+  <title>Protocolo Policial | Acesso</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <main class="login-page">
+    <section class="card">
+      <div class="logo-box">
+        <img
+          src="assets/marca-protocolo-policial.jpeg"
+          alt="Protocolo Policial Cursos"
+          class="logo-protocolo"
+        >
+      </div>
 
-  <!-- TOPO COM BRASÃO -->
-  <header class="topo">
-    <img src="brasao_cpr1.png" alt="Brasão PMRN" class="brasao">
-  </header>
+      <h1>Acesso do candidato</h1>
+      <p class="muted">Informe seus dados para acessar o simulado.</p>
 
-  <!-- CONTEÚDO -->
-  <div class="container">
-    <h1>Banco de Pontos Meritório</h1>
-    <p>Selecione a Unidade Operacional</p>
+      <form id="loginForm">
+        <label for="nome">Nome completo</label>
+        <input
+          id="nome"
+          type="text"
+          placeholder="Digite seu nome"
+          required
+          minlength="2"
+          autocomplete="name"
+        >
 
-    <button class="btn btn-2bpm"
-      onclick="window.location.href='https:juliodantaspmrn.github.io/pmrn/index.html'">
-      2º BPM
-    </button>
+        <label for="credencial">Credencial de acesso</label>
+        <input
+          id="credencial"
+          type="password"
+          required
+          autocomplete="current-password"
+        >
 
-    <button class="btn btn-12bpm"
-      onclick="window.location.href='https:juliodantaspmrn.github.io/pmrn/index.html'">
-      12º BPM
-    </button>
+        <p id="erro" class="erro" role="alert"></p>
 
-    <button class="btn btn-6cipm"
-      onclick="window.location.href='https:juliodantaspmrn.github.io/pmrn/index.html'">
-      6ª CIPM
-    </button>
+        <button type="submit">Entrar no simulado →</button>
+      </form>
+    </section>
+  </main>
 
-    <footer>
-      Polícia Militar do Rio Grande do Norte<br>
-      Comando de Policiamento Regional I
-    </footer>
-  </div>
-
+  <script src="js/login.js"></script>
 </body>
 </html>
